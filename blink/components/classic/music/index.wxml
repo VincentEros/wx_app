@@ -1,0 +1,9 @@
+<!--components/classic/music/index.wxml-->
+<view class='body-container'>
+  <view class='poster'>
+    <image class='poster-img {{Play?"playing":""}}' src='{{img}}'></image>
+    <image bindtap='playerControlor' class='player-btn' src='{{!Play ? pauseSrc : playSrc}}'></image>    
+  </view>
+  <image class='category' src='images/music@tag.png'></image>
+  <text class='content'>{{content}}</text>
+</view>

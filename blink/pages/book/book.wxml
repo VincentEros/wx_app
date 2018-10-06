@@ -1,0 +1,14 @@
+<!--pages/book/book.wxml-->
+<view>
+  <v-search/>
+  <view class='book-container'>
+    <view  class='exhibition'>
+      <image class='head-img' src='/images/book/quality.png'></image>
+      <view class='books-container'>
+        <block wx:key='id' wx:for='{{trendingList}}'>
+          <v-book bind:detailTog='detailTog' bookItem='{{item}}'/>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

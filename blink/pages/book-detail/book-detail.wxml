@@ -1,0 +1,37 @@
+<!--pages/book-detail/book-detail.wxml-->
+<view>
+  <v-search/>
+  <view class='content'>
+    <view class='detail-box'>
+      <image class='thumbnail' src='{{bookDetail.image}}'></image>
+      <text class='title'>{{bookDetail.title}}</text>
+      <view wx:key='id' wx:for='{{bookDetail.author}}' class='author'>
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class='detail-box'>
+      <text class='mini-title'>短评</text>
+        <view class='comments' wx:for='{{comments}}'>
+          <view class='comment'>
+            <text>{{item.content}}</text>
+            <text> + {{item.nums}}</text>
+          </view>
+        </view>
+    </view>
+    <view class='detail-box'>
+      <text class='mini-title'>内容简介</text>
+      <text class='summary'>{{bookDetail.summary}}</text>
+    </view>
+    <view class='detail-box'>
+      <text class='mini-title'>书本信息</text>
+      <view class='mini-box'>
+        <text>{{bookDetail.publisher}}</text>
+        <text>{{bookDetail.pubdate}}</text>
+        <text>{{bookDetail.pages}}</text>
+        <text>￥{{bookDetail.price}}</text>
+        <text>{{bookDetail.binding}}</text>
+        <text>{{bookDetail.category}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--components/search/index.wxml-->
+<view class='header'>
+  <view wx:if='{{false}}' class='search-box'></view>
+  <view class='box'>
+    <image class='search-img' src='/images/icon/search.png'></image>
+    <text>搜索书籍</text>
+  </view>
+</view>

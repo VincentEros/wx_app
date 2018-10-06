@@ -1,0 +1,60 @@
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster {
+  display: flex;
+  width: 750rpx;
+  height: 500rpx;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.poster-img {
+  width: 420rpx;
+  height: 420rpx;
+  border: 1px solid #f9f9f9;  
+  border-radius: 50%;
+  /* box-shadow: 1rpx red; */
+  position: relative;
+  
+}
+
+.player-btn {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+}
+
+.category {
+  position: relative;
+  top: -68rpx;
+  left: -300rpx;
+  width: 46rpx;
+  height: 142rpx;
+}
+
+.content {
+  font-size: 36rpx;
+  max-width: 550rpx;
+}
+
+.playing {
+  /* transform: rotate(360deg);  */
+  /* animation: rotation 12s linear infinite; */
+  -webkit-transform: rotate(360deg);
+  animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12s linear infinite;
+  -webkit-animation: rotation 12s linear infinite;
+  -o-animation: rotation 12s linear infinite;
+}
+
+@-webkit-keyframes rotation{
+  from{
+     -webkit-transform: rotate(0deg)}
+  to{
+     -webkit-transform: rotate(360deg)}
+}

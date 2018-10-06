@@ -1,0 +1,12 @@
+<!--pages/classic/classic.wxml-->
+<view class='header-container'>
+  <v-date class='date' index='{{index}}'/>
+  <view class='right'>
+    <v-like class='like' bind:isLike='onLike' onLike='{{like_status}}' likeCount='{{fav_nums}}'/>
+    <v-share class='share'/>
+  </view>
+</view>
+<v-movie wx:if='{{type==100}}' img="{{image}}" content="{{content}}"/>
+<v-music bind:isPlaying='isPlaying' whosPlaying='{{whosPlaying}}' wx:if='{{type==200}}' index='{{index}}' audioUrl='{{url}}' img="{{image}}" content="{{content}}"/>
+<v-essay wx:if='{{type==300}}' img="{{image}}" content="{{content}}"/>
+<v-navi bind:changeMovieEvent='changeInfo' class='navi' title='{{title}}' latest='{{index==latest_index}}' last='{{index==1}}'/>

@@ -1,0 +1,45 @@
+/* components/detail/index.wxss */
+
+.detail-container {
+  background-color: #ffffff;
+  height: 1000rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.thumbnail {
+  width: 240rpx;
+  height: 360rpx;
+}
+
+text {
+word-break: break-all;
+}
+
+.close {
+  position: fixed;
+  right: 40rpx;
+  top: 120rpx;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.detail-box {
+  font-size: 20rpx;
+  padding: 50rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border-top: 10rpx solid #f5f5f5; */
+  border-bottom: 10rpx solid #f5f5f5;
+}
+
+.mini-box {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: cenfter; */
+}

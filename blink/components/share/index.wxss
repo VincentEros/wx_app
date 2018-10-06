@@ -1,0 +1,10 @@
+/* components/share/index.wxss */
+
+.btn-share {
+  display: inline-flex;
+
+}
+.btn-share>image {
+  width: 40rpx;
+  height: 40rpx;
+}
