@@ -1,0 +1,10 @@
+<!--components/comment/index.wxml-->
+<view class='bottom'>
+  <view wx:if='{{false}}' class='comment-box'></view>
+  <view class='box' bindtap='toComment'>
+    <image class='search-img' src='/images/icon/search.png'></image>
+    <!-- <text>留下您的短评~</text> -->
+    <input placeholder='留下您的短评~'></input>
+  </view>
+  <v-like likeCount='{{likeCount}}' onLike='{{likeStatus}}' />
+</view>

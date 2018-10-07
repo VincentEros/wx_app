@@ -1,4 +1,7 @@
 <!--pages/book-detail/book-detail.wxml-->
+
+<wxs src='../../utils/filter.wxs' module='util' />
+
 <view>
   <v-search/>
   <view class='content'>
@@ -11,16 +14,21 @@
     </view>
     <view class='detail-box'>
       <text class='mini-title'>短评</text>
-        <view class='comments' wx:for='{{comments}}'>
-          <view class='comment'>
-            <text>{{item.content}}</text>
-            <text> + {{item.nums}}</text>
-          </view>
+        <view class='comments'>
+          <block class='comment' wx:for='{{util.arrayLimit(comments, 10)}}' wx:key='content'>
+            <!-- <v-tag  tag-class='{{index == 0? "ex-tag1" : "" || index == 1? "ex-tag2" : "" }}' text='{{item.content}}'> -->
+            <v-tag  tag-class='{{util.tagClassCtr(index)}}' text='{{item.content}}'>
+              <text slot='after' class='fav-nums' decode='true'>&nbsp;+{{item.nums}}</text>
+            </v-tag>
+            <!-- <text>{{item.content}}</text>
+            <text> + {{item.nums}}</text> -->
+          </block>
         </view>
     </view>
     <view class='detail-box'>
       <text class='mini-title'>内容简介</text>
-      <text class='summary'>{{bookDetail.summary}}</text>
+      <!-- <text>{{util.abcc(bookDetail.summary)}}</text> -->
+      <text class='summary' decode='true'>{{util.format(bookDetail.summary)}}</text>
     </view>
     <view class='detail-box'>
       <text class='mini-title'>书本信息</text>
@@ -34,4 +42,5 @@
       </view>
     </view>
   </view>
+  <v-comment likeCount='{{likeCount}}' like_status='{{}}' />
 </view>

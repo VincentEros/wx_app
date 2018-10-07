@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "v-like": "/components/like/index",
-    "v-search": "/components/search/index"
+    "v-search": "/components/search/index",
+    "v-tag": "/components/tag/index",
+    "v-comment": "/components/comment/index"
   }
 }

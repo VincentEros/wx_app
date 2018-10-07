@@ -1,0 +1,26 @@
+var format = function(text) {
+  if(!text) {
+    return
+  }
+
+  var reg = getRegExp('\\\\n', 'g')
+  return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+
+var tagClassCtr = function(index) {
+    switch (index) {
+    case 0: return 'ex-tag1'
+    case 1: return 'ex-tag2'
+    default: return ''
+  } 
+}
+
+var arrayLimit = function(array, length) {
+  return array.slice(0, length)
+}
+
+module.exports = {
+  format: format,
+  tagClassCtr: tagClassCtr,
+  arrayLimit: arrayLimit
+}
