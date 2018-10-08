@@ -6,5 +6,5 @@
     <!-- <text>留下您的短评~</text> -->
     <input placeholder='留下您的短评~'></input>
   </view>
-  <v-like likeCount='{{likeCount}}' onLike='{{likeStatus}}' />
+  <v-like likeCount='{{likeCount}}' bind:isLike='onLike' likeStatus='{{likeStatus}}' />
 </view>

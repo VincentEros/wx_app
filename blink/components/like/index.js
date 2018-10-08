@@ -4,7 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    onLike: {
+    likeStatus: {
       type: Boolean
     },
     likeCount: {
@@ -25,15 +25,15 @@ Component({
    */
   methods: {
     toggleLike: function () {
-      let onLike = this.properties.onLike
+      let likeStatus = this.properties.likeStatus
       let likeCount = this.properties.likeCount
 
-      likeCount = onLike? likeCount - 1 : likeCount + 1;
+      likeCount = likeStatus? likeCount - 1 : likeCount + 1;
       this.setData({
-        onLike: !onLike,
+        likeStatus: !likeStatus,
         likeCount
       })
-      let behavior = this.properties.onLike ? 'like' : 'cancel'
+      let behavior = this.properties.likeStatus ? 'like' : 'cancel'
       this.triggerEvent('isLike', {
         behavior: behavior
       }, {})

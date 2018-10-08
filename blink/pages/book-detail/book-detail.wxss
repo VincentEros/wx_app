@@ -10,7 +10,13 @@
 .content {
   position: relative;
   top: 100rpx;
-  margin-bottom: 90rpx;
+  
+}
+
+.bottom-blank {
+  width: 100%;
+  height: 90rpx;
+
 }
 
 

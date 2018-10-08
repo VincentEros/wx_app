@@ -41,6 +41,7 @@
         <text>{{bookDetail.category}}</text>
       </view>
     </view>
+    <view class='bottom-blank'></view>
   </view>
-  <v-comment likeCount='{{likeCount}}' like_status='{{}}' />
+  <v-comment bookID='{{bookID}}' likeCount='{{likeCount}}' likeStatus='{{likeStatus}}' />
 </view>

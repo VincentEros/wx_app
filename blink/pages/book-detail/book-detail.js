@@ -12,7 +12,8 @@ Page({
     comments: [],
     bookDetail: null,
     likeStatus: false,
-    likeCount: 0
+    likeCount: 0,
+    bookID: 0
   },
 
 
@@ -48,7 +49,8 @@ Page({
         console.log(res)
         this.setData({
           likeStatus: res.like_status,
-          likeCount: res.fav_nums
+          likeCount: res.fav_nums,
+          bookID: res.id
         })
       }
     )
